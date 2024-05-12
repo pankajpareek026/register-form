@@ -26,7 +26,7 @@ const UserInfoPage = () => {
 
   return (
     <div className="bg-gray-200 min-h-screen flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg overflow-hidden shadow-xl p-8 max-w-auto w-full">
+      <div className="bg-white rounded-lg overflow-hidden shadow-xl p-8 max-w-[80%] w-full">
         <h2 className="text-3xl font-normal mb-6 text-center text-blue-500">User Information</h2>
 
         <div className="grid grid-cols-2 gap-4">
