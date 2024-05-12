@@ -43,7 +43,7 @@ const RegisterPage = () => {
 
     const getCountries = () => {
         setIsLoading(true);
-        return axios.get('/api/countries', {
+        return axios.get('https://form-1cx0.onrender.com/api/countries', {
             Headers: {
                 "content-type": "application/json"
             }
@@ -66,7 +66,7 @@ const RegisterPage = () => {
             return;
         }
 
-        axios.get(`/api/states/${country.id}`, {
+        axios.get(`https://form-1cx0.onrender.com/api/states/${country.id}`, {
             Headers: {
                 "content-type": "application/json"
             }
@@ -113,7 +113,7 @@ const RegisterPage = () => {
             return;
         }
 
-        axios.get(`/api/cities/${myCountry.id}/${stateData.id}`, {
+        axios.get(`https://form-1cx0.onrender.com/api/cities/${myCountry.id}/${stateData.id}`, {
             Headers: {
                 "content-type": "application/json"
             }
@@ -199,7 +199,7 @@ const RegisterPage = () => {
         try {
             await userDataSchema.validate(formData, { abortEarly: false });
             setIsLoading(true)
-            await axios.post('/api/register', { ...formData }, { headers: { 'Content-Type': 'application/json' } },)
+            await axios.post('https://form-1cx0.onrender.com/api/register', { ...formData }, { headers: { 'Content-Type': 'application/json' } },)
                 .then((response) => {
                     const { success, message, error, redirect } = response.data
 
